@@ -1,0 +1,44 @@
+# Link to the diagram
+# https://www.websequencediagrams.com/?lz=YWN0b3IgVXNlcgpub3RlIG92ZQAJBjogU2FkIDooClVzZXItPkJyb3cAEQVUeXBlIGluIHRoZSBVUkwgZmllbGQgaHR0cHM6Ly9zdHVkaWVzLmNzLmhlbHNpbmtpLmZpL2V4YW1wbGVhcHAvc3BhCgBGBy0-U2VydmVyOiBIVFRQIEdFVAAZLwA5Bi0AgRMLSFRNTC1jb2RlIHdpdGggZW1wdHkgZGl2IGZvciBub3RlcwA1SC9tYWluLmNzcwBzEwASCQCBIkcuagBSFAASBwCDLQoAgxwIAIJYCCBzdGFydHMgZXhlY3V0aW5nIEpTIGNvZGUKdGhhdCByZXF1ZXN0cyBKU09OIGRhdGEgZnJvbSBzAIMQBQplbmQAgi0FAEUcY3JlYXRlcwCECAVldmVudCBoYW5kbGVyCmZvciBmb3JtIHN1Ym1pdCBhY3Rpb24ASwoAgz9EZGF0YS5qc29uAIN2E1t7IGNvbnRlbnQ6ICJIVE1MIGlzIGVhc3kiLCBkYXRlOiAiMjAxOS0wNS0yMyIgfSwgLi4uXQCCMRwAgkAGAIFYFQCCSAduZGVycwCEYAYgdG8gZGlzcGxheS4AgkAKAIY8D1dyaXRlAIURBSB0ZXh0IGludG8AhlMFaW5wdXQAhlQGAIZvEENsaWNrAIZ4BVMAglMGYnV0dG9uAIEDNiAAhAMFAIMbB3RoZQCDLQUuCkl0IGluY2x1ZGVzIGNsZWFuaW5nAIEIECwgcmUtAIFtBmluZwCBbgdhbmQAhE4IIACBRAcAhD0QAIdlFlBPUwCHUCxuZXdfbm90ZV9zcGEAiTEGbGVmdCBvZiAAiEoHClIAgH8HYm9keQCEBAVhaW5zAIJhBQplbnRlcmVkIGJ5IHVzAIVcDACIRwc-TWVtb3J5L0RhdGFiYXNlOiBTYXYAgyEGCgAMDy0AiTgKU2F2ZWQAiHwVVFAAhm8FIDIwMQCCGgdzcG9uc2UAgRYGeyJtZXNzYWdlIjoiAIp8BQCGTQZkIn0Ah0UUTm90aGluZyBoYXBwZW5zLiBOAIRoBXdlcmUAgwYKZWQgYWxyZWFkeSBiZWZvcmUAiycFAIJeBQCHbAcAh0gUAItuBkhhcHB5IQo&s=default
+
+actor User
+note over User: Sad :(
+User->Browser: Type in the URL field https://studies.cs.helsinki.fi/exampleapp/spa
+Browser->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
+Server-->Browser: HTML-code with empty div for notes
+Browser->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa/main.css
+Server-->Browser: main.css
+Browser->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa.js
+Server-->Browser: spa.js
+note over Browser:
+Browser starts executing JS code
+that requests JSON data from server
+end note
+note over Browser:
+Browser creates the event handler
+for form submit action
+end note
+Browser->Server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+Server-->Browser: [{ content: "HTML is easy", date: "2019-05-23" }, ...]
+note over Browser:
+Browser executes the event handler
+that renders notes to display.
+end note
+User->Browser: Write note text into the input field
+User->Browser: Click the Submit button
+note over Browser:
+Browser executes the event handler that submit the form.
+It includes cleaning the input field, re-rendering notes and request to the server
+end note
+Browser->Server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+note left of Server:
+Request body contains text
+entered by user
+end note
+Server->Memory/Database: Save note
+Memory/Database-->Server: Saved
+Server-->Browser: HTTP code 201 and response body {"message":"note created"}
+note over Browser:
+Nothing happens. Notes were re-rendered already before the POST request
+end note
+note over User: Happy!
