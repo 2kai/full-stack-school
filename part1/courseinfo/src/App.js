@@ -2,7 +2,11 @@ import React from 'react';
 
 const Header = (props) => <h1>{props.course}</h1>;
 
-const Content = (props) => props.parts.map((part, index) => <p key={index}>{part.name} {part.exercises}</p>);
+const Part = (props) => <p>{props.name} {props.exercises}</p>;
+
+const Content = (props) => props.parts.map(
+    (part, index) => <Part key={index} name={part.name} exercises={part.exercises}/>
+);
 
 const Total = (props) => <p>Number of exercises {props.number_of_exercises}</p>;
 

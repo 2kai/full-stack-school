@@ -18,13 +18,20 @@ Diagram of requests - part0/0.6.txt and part0/0.6.png
 
 ##### Part 1
 
-###### Exercise 1.1
+###### How to run "Course information" application
 
 ```shell
 docker run -p 80:3000 -v "$PWD":/opt -u node -w /opt node:17.1.0-alpine3.14 sh -c 'cd /opt/part1/courseinfo && npm i && NODE_OPTIONS=--openssl-legacy-provider npm start'
 ```
 
-Open http://localhost and see the first version of "Course information" application
+###### Exercise 1.1, "Course information" application
+
+Open http://localhost and see the first version of "Course information" application.
+
+###### Exercise 1.2, "Course information" application
+
+Open http://localhost and see the same picture as in Exercise 1.1. Here just refactoring was done. So visually nothing
+has been changed.
 
 ##### Development notes
 
