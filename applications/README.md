@@ -23,6 +23,10 @@ docker run -p 80:3000 -v "$PWD":/opt -u node -w /opt node:17.1.0-alpine3.14 sh -
 Open http://localhost and see the same picture as in Exercise 1.5. Just a refactoring was done in these exercises. So
 visually nothing has been changed.
 
+###### Exercise 2.4, "Course information" application
+
+Open http://localhost and see that now multiple course can be shown on the page.
+
 ##### Part 1
 
 ###### Exercise 1.1, "Course information" application
