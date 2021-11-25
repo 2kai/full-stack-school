@@ -4,15 +4,18 @@ const SectionHeader = ({title}) => <h1>{title}</h1>;
 
 const Button = ({title, clickHandler}) => <button onClick={clickHandler}>{title}</button>;
 
-const StatisticLine = ({title, value, type}) => {
-    if (type === 'percentage') {
-        return (
-            <p>{title} {value}%</p>
-        );
+const StatisticLine = ({title, value, format}) => {
+    let formattedValue = value;
+
+    if (format === 'percentage') {
+        formattedValue += '%';
     }
 
     return (
-        <p>{title} {value}</p>
+        <tr>
+            <td>{title}</td>
+            <td>{formattedValue}</td>
+        </tr>
     );
 };
 
@@ -24,14 +27,20 @@ const Statistics = ({stats}) => {
     }
 
     return (
-        <>
+        <table>
+            <tbody>
             <StatisticLine title="good" value={stats.good}/>
             <StatisticLine title="neutral" value={stats.neutral}/>
             <StatisticLine title="bad" value={stats.bad}/>
             <StatisticLine title="all" value={totalVotes}/>
             <StatisticLine title="average" value={totalVotes > 0 ? (stats.good - stats.bad) / totalVotes : 0}/>
-            <StatisticLine title="positive" value={totalVotes > 0 ? stats.good / totalVotes : 0} type="percentage"/>
-        </>
+            <StatisticLine
+                title="positive"
+                value={totalVotes > 0 ? stats.good / totalVotes * 100 : 0}
+                format="percentage"
+            />
+            </tbody>
+        </table>
     );
 };
 

@@ -44,3 +44,7 @@ Open http://localhost and see a message "No feedback given" if there is no feedb
 
 Open http://localhost and see the same picture as in Exercise 1.9. Just a refactoring was done in this exercise. So
 visually nothing has been changed.
+
+###### Exercises 1.11, "Unicafe" application
+
+Open http://localhost and see that statistics part is shown now in HTML table. 
