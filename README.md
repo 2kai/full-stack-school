@@ -51,6 +51,11 @@ increase counters.
 Open http://localhost and see the extended statistics including all, average and positive percentage and refreshing on
 button click.
 
+###### Exercises 1.8, "Unicafe" application
+
+Open http://localhost and see the same picture as in Exercise 1.7. Just a refactoring was done in this exercise. So
+visually nothing has been changed.
+
 ##### Development notes
 
 ```shell
