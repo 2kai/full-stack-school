@@ -56,6 +56,10 @@ button click.
 Open http://localhost and see the same picture as in Exercise 1.7. Just a refactoring was done in this exercise. So
 visually nothing has been changed.
 
+###### Exercises 1.9, "Unicafe" application
+
+Open http://localhost and see a message "No feedback given" if there is no feedback yet.
+
 ##### Development notes
 
 ```shell

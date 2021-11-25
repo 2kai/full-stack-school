@@ -19,9 +19,12 @@ const StatisticsLine = ({title, value, type}) => {
 const Statistics = ({stats}) => {
     const totalVotes = stats.good + stats.neutral + stats.bad;
 
+    if (totalVotes === 0) {
+        return <p>No feedback given</p>;
+    }
+
     return (
         <>
-            <SectionHeader title="statistics"/>
             <StatisticsLine title="good" value={stats.good}/>
             <StatisticsLine title="neutral" value={stats.neutral}/>
             <StatisticsLine title="bad" value={stats.bad}/>
@@ -44,6 +47,7 @@ const App = () => {
             <Button title="good" clickHandler={() => setGood(good + 1)}/>
             <Button title="neutral" clickHandler={() => setNeutral(neutral + 1)}/>
             <Button title="bad" clickHandler={() => setBad(bad + 1)}/>
+            <SectionHeader title="statistics"/>
             <Statistics stats={{good: good, neutral: neutral, bad: bad}}/>
         </div>
     )
