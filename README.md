@@ -1,6 +1,8 @@
 It is recommended to put each part and exercises to the corresponding directories. I will try to follow this
 recommendation but alongside I will make a tag after each exercise. So with `git checkout v0.4` someone can easily
-checkout the repository on the moment and state of particular exercise.
+checkout the repository on the moment and state of particular exercise. Many things can be changed during the course and
+this version of README can be not relevant for old tasks. Then checkout on the tag will bring correct version of README
+for particular exercise.
 
 ##### Part 0
 
@@ -33,6 +35,8 @@ Open http://localhost and see the first version of "Course information" applicat
 Open http://localhost and see the same picture as in Exercise 1.1. Here just refactoring was done. So visually nothing
 has been changed.
 
+###### Exercise 1.3, "Course information" application
+
 ##### Development notes
 
 ```shell
@@ -45,6 +49,5 @@ For Node.JS 17.1.0 run application as follows:
 NODE_OPTIONS=--openssl-legacy-provider npm start
 ```
 
-More information see
-on [Stack Overflow](https://stackoverflow.com/questions/69665222/node-17-0-1-causes-some-error-digital-envelope-routinesunsupported)
-
+More information see on
+[Stack Overflow](https://stackoverflow.com/questions/69665222/node-17-0-1-causes-some-error-digital-envelope-routinesunsupported)
