@@ -63,3 +63,7 @@ Open http://localhost and see a page with anecdote. Click the button "next anecd
 
 Open http://localhost and see a page with anecdote. Now there are votes counter and "vote" button which increase vote
 counter by one.
+
+###### Exercises 1.14, "Anecdotes" application
+
+Open http://localhost and see a page with anecdote. Now there is an anecdote with most votes as well.
