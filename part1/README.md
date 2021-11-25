@@ -58,3 +58,8 @@ Open http://localhost and see that statistics part is shown now in HTML table.
 ###### Exercises 1.12, "Anecdotes" application
 
 Open http://localhost and see a page with anecdote. Click the button "next anecdote" and get new (random) one.
+
+###### Exercises 1.13, "Anecdotes" application
+
+Open http://localhost and see a page with anecdote. Now there are votes counter and "vote" button which increase vote
+counter by one.
