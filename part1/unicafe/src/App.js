@@ -4,7 +4,7 @@ const SectionHeader = ({title}) => <h1>{title}</h1>;
 
 const Button = ({title, clickHandler}) => <button onClick={clickHandler}>{title}</button>;
 
-const StatisticsLine = ({title, value, type}) => {
+const StatisticLine = ({title, value, type}) => {
     if (type === 'percentage') {
         return (
             <p>{title} {value}%</p>
@@ -25,12 +25,12 @@ const Statistics = ({stats}) => {
 
     return (
         <>
-            <StatisticsLine title="good" value={stats.good}/>
-            <StatisticsLine title="neutral" value={stats.neutral}/>
-            <StatisticsLine title="bad" value={stats.bad}/>
-            <StatisticsLine title="all" value={totalVotes}/>
-            <StatisticsLine title="average" value={totalVotes > 0 ? (stats.good - stats.bad) / totalVotes : 0}/>
-            <StatisticsLine title="positive" value={totalVotes > 0 ? stats.good / totalVotes : 0} type="percentage"/>
+            <StatisticLine title="good" value={stats.good}/>
+            <StatisticLine title="neutral" value={stats.neutral}/>
+            <StatisticLine title="bad" value={stats.bad}/>
+            <StatisticLine title="all" value={totalVotes}/>
+            <StatisticLine title="average" value={totalVotes > 0 ? (stats.good - stats.bad) / totalVotes : 0}/>
+            <StatisticLine title="positive" value={totalVotes > 0 ? stats.good / totalVotes : 0} type="percentage"/>
         </>
     );
 };
