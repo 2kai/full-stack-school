@@ -30,7 +30,7 @@ docker run -p 80:3000 -v "$PWD":/opt -u node -w /opt node:17.1.0-alpine3.14 sh -
 
 Open http://localhost and see the first version of "Course information" application.
 
-###### Exercises 1.2, 1.3, 1.4, "Course information" application
+###### Exercises 1.2, 1.3, 1.4, 1.5, "Course information" application
 
 Open http://localhost and see the same picture as in Exercise 1.1. Just a refactoring was done in these exercises. So
 visually nothing has been changed.
