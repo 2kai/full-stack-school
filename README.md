@@ -46,6 +46,11 @@ visually nothing has been changed.
 Open http://localhost and see the first version of "Unicafe" application. You can already click the buttons that will
 increase counters.
 
+###### Exercises 1.7, "Unicafe" application
+
+Open http://localhost and see the extended statistics including all, average and positive percentage and refreshing on
+button click.
+
 ##### Development notes
 
 ```shell
