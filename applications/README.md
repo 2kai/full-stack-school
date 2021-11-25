@@ -3,19 +3,19 @@
 ###### How to run "Course information" application
 
 ```shell
-docker run -p 80:3000 -v "$PWD":/opt -u node -w /opt node:17.1.0-alpine3.14 sh -c 'cd /opt/part1/courseinfo && npm i && NODE_OPTIONS=--openssl-legacy-provider npm start'
+docker run -p 80:3000 -v "$PWD":/opt -u node -w /opt node:17.1.0-alpine3.14 sh -c 'cd /opt/applications/courseinfo && npm i && NODE_OPTIONS=--openssl-legacy-provider npm start'
 ```
 
 ###### How to run "Unicafe" application
 
 ```shell
-docker run -p 80:3000 -v "$PWD":/opt -u node -w /opt node:17.1.0-alpine3.14 sh -c 'cd /opt/part1/unicafe && npm i && NODE_OPTIONS=--openssl-legacy-provider npm start'
+docker run -p 80:3000 -v "$PWD":/opt -u node -w /opt node:17.1.0-alpine3.14 sh -c 'cd /opt/applications/unicafe && npm i && NODE_OPTIONS=--openssl-legacy-provider npm start'
 ```
 
 ###### How to run "Anecdotes" application
 
 ```shell
-docker run -p 80:3000 -v "$PWD":/opt -u node -w /opt node:17.1.0-alpine3.14 sh -c 'cd /opt/part1/anecdotes && npm i && NODE_OPTIONS=--openssl-legacy-provider npm start'
+docker run -p 80:3000 -v "$PWD":/opt -u node -w /opt node:17.1.0-alpine3.14 sh -c 'cd /opt/applications/anecdotes && npm i && NODE_OPTIONS=--openssl-legacy-provider npm start'
 ```
 
 ###### Exercise 1.1, "Course information" application
