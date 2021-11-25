@@ -27,6 +27,11 @@ visually nothing has been changed.
 
 Open http://localhost and see that now multiple course can be shown on the page.
 
+###### Exercise 2.5, "Course information" application
+
+Open http://localhost and see the same picture as in Exercise 2.4. Just a refactoring was done in this exercise. So
+visually nothing has been changed.
+
 ##### Part 1
 
 ###### Exercise 1.1, "Course information" application
