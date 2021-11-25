@@ -5,7 +5,8 @@ checkout the repository on the moment and state of particular exercise.
 Many things can be changed during the course and this version of README can be not relevant for old tasks. Then checkout
 on the tag will bring correct version of README for particular exercise.
 
-README file for each part is located in particular folder. E.g., README for Part 1 is located in `./part1/README.md`
+README file for Part 0 is located `./part0/README.md`. README for applications from Part 1-2 is located
+in `./applications/README.md`
 
 ##### Development notes
 

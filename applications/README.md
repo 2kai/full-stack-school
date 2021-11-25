@@ -1,5 +1,3 @@
-##### Part 1
-
 ###### How to run "Course information" application
 
 ```shell
@@ -17,6 +15,15 @@ docker run -p 80:3000 -v "$PWD":/opt -u node -w /opt node:17.1.0-alpine3.14 sh -
 ```shell
 docker run -p 80:3000 -v "$PWD":/opt -u node -w /opt node:17.1.0-alpine3.14 sh -c 'cd /opt/applications/anecdotes && npm i && NODE_OPTIONS=--openssl-legacy-provider npm start'
 ```
+
+##### Part 2
+
+###### Exercise 2.1, 2.2, 2.3, "Course information" application
+
+Open http://localhost and see the same picture as in Exercise 1.5. Just a refactoring was done in these exercises. So
+visually nothing has been changed.
+
+##### Part 1
 
 ###### Exercise 1.1, "Course information" application
 
