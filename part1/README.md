@@ -12,6 +12,12 @@ docker run -p 80:3000 -v "$PWD":/opt -u node -w /opt node:17.1.0-alpine3.14 sh -
 docker run -p 80:3000 -v "$PWD":/opt -u node -w /opt node:17.1.0-alpine3.14 sh -c 'cd /opt/part1/unicafe && npm i && NODE_OPTIONS=--openssl-legacy-provider npm start'
 ```
 
+###### How to run "Anecdotes" application
+
+```shell
+docker run -p 80:3000 -v "$PWD":/opt -u node -w /opt node:17.1.0-alpine3.14 sh -c 'cd /opt/part1/anecdotes && npm i && NODE_OPTIONS=--openssl-legacy-provider npm start'
+```
+
 ###### Exercise 1.1, "Course information" application
 
 Open http://localhost and see the first version of "Course information" application.
@@ -47,4 +53,8 @@ visually nothing has been changed.
 
 ###### Exercises 1.11, "Unicafe" application
 
-Open http://localhost and see that statistics part is shown now in HTML table. 
+Open http://localhost and see that statistics part is shown now in HTML table.
+
+###### Exercises 1.12, "Anecdotes" application
+
+Open http://localhost and see a page with anecdote. Click the button "next anecdote" and get new (random) one.
