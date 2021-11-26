@@ -19,7 +19,7 @@ docker run -p 80:3000 -v "$PWD":/opt -u node -w /opt node:17.1.0-alpine3.14 sh -
 ###### How to run "Phonebook" application
 
 ```shell
-docker run -p 80:3000 -v "$PWD":/opt -u node -w /opt node:17.1.0-alpine3.14 sh -c 'cd /opt/applications/phonebook && npm i && NODE_OPTIONS=--openssl-legacy-provider npm start'
+docker run -p 80:3000 -p 3001:3001 -v "$PWD":/opt -u node -w /opt node:17.1.0-alpine3.14 sh -c 'cd /opt/applications/phonebook && npm i && (npm run server&) && NODE_OPTIONS=--openssl-legacy-provider npm start'
 ```
 
 ##### Part 2
@@ -56,9 +56,9 @@ well and also validation rules were added to avoid empty name or number in the p
 
 Open http://localhost and see list of persons and a form to add new person to the phonebook. Now you can filter names.
 
-###### Exercise 2.10, "Phonebook" application
+###### Exercises 2.10, 2.11, "Phonebook" application
 
-Open http://localhost and see the same picture as in Exercise 2.9. Just a refactoring was done in this exercise. So
+Open http://localhost and see the same picture as in Exercise 2.9. Just a refactoring was done in these exercises. So
 visually nothing has been changed.
 
 ##### Part 1
