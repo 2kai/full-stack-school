@@ -56,6 +56,11 @@ well and also validation rules were added to avoid empty name or number in the p
 
 Open http://localhost and see list of persons and a form to add new person to the phonebook. Now you can filter names.
 
+###### Exercise 2.10, "Phonebook" application
+
+Open http://localhost and see the same picture as in Exercise 2.9. Just a refactoring was done in this exercise. So
+visually nothing has been changed.
+
 ##### Part 1
 
 ###### Exercise 1.1, "Course information" application
