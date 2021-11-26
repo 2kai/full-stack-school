@@ -52,6 +52,10 @@ rule to prevent duplicates in the phonebook.
 Open http://localhost and see list of persons and a form to add new person to the phonebook. Now you can add a number as
 well and also validation rules were added to avoid empty name or number in the phonebook.
 
+###### Exercise 2.9, "Phonebook" application
+
+Open http://localhost and see list of persons and a form to add new person to the phonebook. Now you can filter names.
+
 ##### Part 1
 
 ###### Exercise 1.1, "Course information" application
