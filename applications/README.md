@@ -16,6 +16,12 @@ docker run -p 80:3000 -v "$PWD":/opt -u node -w /opt node:17.1.0-alpine3.14 sh -
 docker run -p 80:3000 -v "$PWD":/opt -u node -w /opt node:17.1.0-alpine3.14 sh -c 'cd /opt/applications/anecdotes && npm i && NODE_OPTIONS=--openssl-legacy-provider npm start'
 ```
 
+###### How to run "Phonebook" application
+
+```shell
+docker run -p 80:3000 -v "$PWD":/opt -u node -w /opt node:17.1.0-alpine3.14 sh -c 'cd /opt/applications/phonebook && npm i && NODE_OPTIONS=--openssl-legacy-provider npm start'
+```
+
 ##### Part 2
 
 ###### Exercises 2.1, 2.2, 2.3, "Course information" application
@@ -31,6 +37,10 @@ Open http://localhost and see that now multiple course can be shown on the page.
 
 Open http://localhost and see the same picture as in Exercise 2.4. Just a refactoring was done in this exercise. So
 visually nothing has been changed.
+
+###### Exercise 2.6, "Phonebook" application
+
+Open http://localhost and see list of persons and a form to add new person to the phonebook.
 
 ##### Part 1
 
