@@ -42,6 +42,11 @@ visually nothing has been changed.
 
 Open http://localhost and see list of persons and a form to add new person to the phonebook.
 
+###### Exercise 2.7, "Phonebook" application
+
+Open http://localhost and see list of persons and a form to add new person to the phonebook. Now there is a validation
+rule to prevent duplicates in the phonebook.
+
 ##### Part 1
 
 ###### Exercise 1.1, "Course information" application
