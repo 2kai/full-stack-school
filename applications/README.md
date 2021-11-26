@@ -22,6 +22,12 @@ docker run -p 80:3000 -v "$PWD":/opt -u node -w /opt node:17.1.0-alpine3.14 sh -
 docker run -p 80:3000 -p 3001:3001 -v "$PWD":/opt -u node -w /opt node:17.1.0-alpine3.14 sh -c 'cd /opt/applications/phonebook && npm i && (npm run server&) && NODE_OPTIONS=--openssl-legacy-provider npm start'
 ```
 
+###### How to run "Data for countries" application
+
+```shell
+docker run -p 80:3000 -v "$PWD":/opt -u node -w /opt node:17.1.0-alpine3.14 sh -c 'cd /opt/applications/countries && npm i && NODE_OPTIONS=--openssl-legacy-provider npm start'
+```
+
 ##### Part 2
 
 ###### Exercises 2.1, 2.2, 2.3, "Course information" application
@@ -60,6 +66,10 @@ Open http://localhost and see list of persons and a form to add new person to th
 
 Open http://localhost and see the same picture as in Exercise 2.9. Just a refactoring was done in these exercises. So
 visually nothing has been changed.
+
+###### Exercise 2.12, "Data for countries" application
+
+Open http://localhost and see the first version of "Data for countries" application.
 
 ##### Part 1
 
