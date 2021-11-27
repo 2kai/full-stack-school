@@ -71,6 +71,11 @@ visually nothing has been changed.
 
 Open http://localhost and see the first version of "Data for countries" application.
 
+###### Exercise 2.13, "Data for countries" application
+
+Open http://localhost and see "Data for countries" application. You can filter countries, click "show" button to get
+information about particular country or type in the full name of country to get this information.
+
 ##### Part 1
 
 ###### Exercise 1.1, "Course information" application
