@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import CountriesList from './components/CountriesList';
 import CountryView from './components/CountryView';
+import Weather from './components/Weather';
 
 const App = () => {
     const [countries, setCountries] = useState([]);
@@ -36,6 +37,7 @@ const App = () => {
                 countryChangeHandler={(country) => setCountry(country)}
             />
             <CountryView country={country}/>
+            <Weather country={country} apiKey={process.env.REACT_APP_API_KEY}/>
         </div>
     );
 }

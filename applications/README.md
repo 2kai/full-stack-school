@@ -25,7 +25,7 @@ docker run -p 80:3000 -p 3001:3001 -v "$PWD":/opt -u node -w /opt node:17.1.0-al
 ###### How to run "Data for countries" application
 
 ```shell
-docker run -p 80:3000 -v "$PWD":/opt -u node -w /opt node:17.1.0-alpine3.14 sh -c 'cd /opt/applications/countries && npm i && NODE_OPTIONS=--openssl-legacy-provider npm start'
+docker run -p 80:3000 -v "$PWD":/opt -u node -w /opt -e REACT_APP_API_KEY=<OPENWEATHERMAP_API_KEY> node:17.1.0-alpine3.14 sh -c 'cd /opt/applications/countries && npm i && NODE_OPTIONS=--openssl-legacy-provider npm start'
 ```
 
 ##### Part 2
@@ -75,6 +75,10 @@ Open http://localhost and see the first version of "Data for countries" applicat
 
 Open http://localhost and see "Data for countries" application. You can filter countries, click "show" button to get
 information about particular country or type in the full name of country to get this information.
+
+###### Exercise 2.14, "Data for countries" application
+
+Open http://localhost and see weather information for the capital of selected country.
 
 ##### Part 1
 
