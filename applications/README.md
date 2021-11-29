@@ -80,6 +80,11 @@ information about particular country or type in the full name of country to get 
 
 Open http://localhost and see weather information for the capital of selected country.
 
+###### Exercise 2.15, "Phonebook" application
+
+Open http://localhost and see list of persons and a form to add new person to the phonebook. Now name and number are
+stored on the server.
+
 ##### Part 1
 
 ###### Exercise 1.1, "Course information" application
