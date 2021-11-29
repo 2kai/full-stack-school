@@ -2,13 +2,13 @@ import React, {useEffect, useState} from 'react';
 import Filter from './components/Filter';
 import PersonForm from './components/PersonForm';
 import Persons from './components/Persons';
-import phoneNumbersService from './services/phonenumbers';
+import phonebook from './services/phonebook';
 
 const App = () => {
     const [persons, setPersons] = useState([]);
 
     useEffect(() => {
-        phoneNumbersService
+        phonebook
             .getAll()
             .then(response => setPersons(response.data));
     }, []);
@@ -40,8 +40,8 @@ const App = () => {
             return;
         }
 
-        phoneNumbersService
-            .create({name: newName, number: newNumber})
+        phonebook
+            .createPerson({name: newName, number: newNumber})
             .then(response => setPersons(persons.concat(response.data)));
 
         setNewName('');
@@ -61,7 +61,11 @@ const App = () => {
                 addPersonHandler={addPerson}
             />
             <h2>Numbers</h2>
-            <Persons persons={persons} filter={filter}/>
+            <Persons
+                persons={persons}
+                filter={filter}
+                setPersonHandler={(persons) => setPersons(persons)}
+            />
         </div>
     );
 }
