@@ -85,6 +85,11 @@ Open http://localhost and see weather information for the capital of selected co
 Open http://localhost and see list of persons and a form to add new person to the phonebook. Now name and number are
 stored on the server.
 
+###### Exercise 2.16, "Phonebook" application
+
+Open http://localhost and see the same picture as in Exercise 2.15. Just a refactoring was done in this exercise. So
+visually nothing has been changed.
+
 ##### Part 1
 
 ###### Exercise 1.1, "Course information" application

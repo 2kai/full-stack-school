@@ -2,14 +2,14 @@ import React, {useEffect, useState} from 'react';
 import Filter from './components/Filter';
 import PersonForm from './components/PersonForm';
 import Persons from './components/Persons';
-import axios from 'axios';
+import phoneNumbersService from './services/phonenumbers';
 
 const App = () => {
     const [persons, setPersons] = useState([]);
 
     useEffect(() => {
-        axios
-            .get('http://localhost:3001/persons')
+        phoneNumbersService
+            .getAll()
             .then(response => setPersons(response.data));
     }, []);
 
@@ -40,8 +40,8 @@ const App = () => {
             return;
         }
 
-        axios
-            .post('http://localhost:3001/persons', {name: newName, number: newNumber})
+        phoneNumbersService
+            .create({name: newName, number: newNumber})
             .then(response => setPersons(persons.concat(response.data)));
 
         setNewName('');
